@@ -58,7 +58,19 @@
     <div class="card-header">
         புதுச்சேரி - விண்ணப்பம்
     </div>
+    <div class="container-fluid">
+        @if($errors->count() > 0)
+            <div class="alert alert-danger">
+                <ul class="list-unstyled">
+                    @foreach($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
+        @yield('content')
 
+    </div>
     <div class="card-body">
         @if(session()->has('message'))
     <div class="alert alert-success">

@@ -38,6 +38,7 @@ use Yajra\DataTables\Facades\DataTables;
 use DB;
 use App\Mail\MyDemoMail;
 use Mail;
+use SMS;
 
 class CustomController extends Controller
 {
@@ -374,8 +375,6 @@ class CustomController extends Controller
             Media::whereIn('id', $media)->update(['model_id' => $pondicheryapplication->id]);
         }
 
-        
-        
         $myEmail = $request->input('email');
         if (!empty($myEmail)) {
       
