@@ -209,6 +209,14 @@
                     </tr>
                     <tr>
                         <th>
+                            குறிப்பு
+                        </th>
+                        <td>
+                            {{ $districtposting->notes }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
                             {{ trans('cruds.districtposting.fields.selected') }}
                         </th>
                         <td>
