@@ -328,36 +328,9 @@ class CustomController extends Controller
         return view('application-pondichery', compact('categorypondicheries', 'subcategorypondicheries', 'subsubcategories', 'districtspondicheries', 'pondicheryassemblys'));
     }
 
-    public function postPondicheryApplicationForm(Request $request)
+    public function postPondicheryApplicationForm(StorePondicheryapplicationRequest $request)
     {
-        $pondicheryapplication = new Pondicheryapplication;
-        $pondicheryapplication->name = $request->input('name');
-        $pondicheryapplication->categorypondichery_id = $request->input('categorypondichery_id');
-        $pondicheryapplication->subcategorypondichery_id = $request->input('subcategory_pondicheries_id');
-        $pondicheryapplication->subsubcategory_id = $request->input('subsubcategory_id');
-        $pondicheryapplication->districtspondichery_id = $request->input('districtspondichery_id');
-        $pondicheryapplication->pondicheryassemblys_id = $request->input('pondicheryassemblys_id');
-        $pondicheryapplication->facebook = $request->input('facebook');
-        $pondicheryapplication->twitter = $request->input('twitter');
-        $pondicheryapplication->whatsapp_number = $request->input('whatsapp_number');
-        $pondicheryapplication->email = $request->input('email');
-        $pondicheryapplication->youtube_channel = $request->input('youtube_channel');
-        $pondicheryapplication->instagram = $request->input('instagram');
-        $pondicheryapplication->current_post = $request->input('current_post');
-        $pondicheryapplication->gender = $request->input('gender');
-        $pondicheryapplication->dob = $request->input('dob');
-        $pondicheryapplication->mother = $request->input('mother');
-        $pondicheryapplication->father = $request->input('father');
-        $pondicheryapplication->marrital_status = $request->input('marrital_status');
-        $pondicheryapplication->husband_wife_name = $request->input('husband_wife_name');
-        $pondicheryapplication->education = $request->input('education');
-        $pondicheryapplication->profession = $request->input('profession');
-        $pondicheryapplication->join_date = $request->input('join_date');
-        $pondicheryapplication->permanent_address = $request->input('permanent_address');
-        $pondicheryapplication->communication_address = $request->input('communication_address');
-        $pondicheryapplication->social_category = $request->input('social_category');
-        $pondicheryapplication->notes = $request->input('notes');
-        $pondicheryapplication->payment_status = $request->input('payment_status');
+        $pondicheryapplication = Pondicheryapplication::create($request->all());
 
         if ($request->input('photo', false)) {
             $pondicheryapplication->addMedia(storage_path('tmp/uploads/' . $request->input('photo')))->toMediaCollection('photo');
@@ -381,7 +354,7 @@ class CustomController extends Controller
             Mail::to($myEmail)->send(new MyDemoMail());
         }
 
-        $pondicheryapplication->save();
+        
         
         return redirect()->back()->with('message', 'உங்களது விண்ணப்பம் ஏற்றுக்கொள்ளப்பட்டது. நன்றி - தலைமையகம், விசிக.');
 

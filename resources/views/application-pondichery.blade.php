@@ -104,7 +104,7 @@
                 <span class="help-block">{{ trans('cruds.pondicheryapplication.fields.categorypondichery_helper') }}</span>
             </div>
             <div class="form-group">
-                <label for="subcategorypondichery_id">{{ trans('cruds.pondicheryapplication.fields.subcategorypondichery') }}</label>
+                <label for="subcategorypondichery_id">அமைப்பு</label>
                 
                 <select name="subcategorypondichery_id" id="subcategorypondichery" class="form-control">
                     
@@ -117,7 +117,7 @@
                 <span class="help-block">{{ trans('cruds.pondicheryapplication.fields.subcategorypondichery_helper') }}</span>
             </div>
             <div class="form-group">
-                <label for="subsubcategory_id">{{ trans('cruds.pondicheryapplication.fields.subsubcategory') }}</label>
+                <label for="subsubcategory_id">விரும்பும் பொறுப்பு</label>
                 <select name="subsubcategory_id" id="subsubcategory" class="form-control">
                     
                 </select>
@@ -466,7 +466,6 @@
     
     $('#categorypondichery').change(function(){
     var categorypondicheryID = $(this).val();
-    var scv = ''; 
     if(categorypondicheryID){
         $.ajax({
            type:"GET",
@@ -474,7 +473,7 @@
            success:function(res){               
             if(res){
                 $("#subcategorypondichery").empty();
-                $("#subcategorypondichery").append('<option value="'+scv+'">Select</option>');
+                $("#subcategorypondichery").append('<option>Select</option>');
                 $.each(res,function(key,value){
                     $("#subcategorypondichery").append('<option value="'+key+'">'+value+'</option>');
                 });
