@@ -166,7 +166,6 @@ return [
          * Package Service Providers...
          */
         Bugsnag\BugsnagLaravel\BugsnagServiceProvider::class,
-        Insense\LaravelSMS\Providers\SMSChannelServiceProvider::class,
         /*
          * Application Service Providers...
          */
@@ -227,7 +226,6 @@ return [
         'Validator'    => Illuminate\Support\Facades\Validator::class,
         'View'         => Illuminate\Support\Facades\View::class,
         'Bugsnag'      => Bugsnag\BugsnagLaravel\Facades\Bugsnag::class,
-        'SMS'          => Insense\LaravelSMS\Facades\SMS::class,
 
     ],
 

@@ -33,11 +33,11 @@ class SearchController extends Controller
         $current_post = $request->get('current_post');
         $assembly_name = $request->get('assembly_name');
         $social_division = $request->get('social_division');
-        $selected = $request->get('selected');
+        $selected_option = $request->get('selected_option');
         $selected_post = $request->get('selected_post');
         
         $searchResults = DB::table('districtpostings')
-            ->where(function($query) use ($name, $district1, $applied_post, $current_post, $assembly_name, $social_division, $selected, $selected_post) {
+            ->where(function($query) use ($name, $district1, $applied_post, $current_post, $assembly_name, $social_division, $selected_option, $selected_post) {
                 
                 if($name)
                     $query->where('name', 'like', '%'.$name.'%');
@@ -57,8 +57,8 @@ class SearchController extends Controller
                 if($social_division)
                     $query->where('social_division', '=', $social_division);
 
-                if($selected)
-                    $query->where('selected', '=', $selected);
+                if($selected_option)
+                    $query->where('selected', '=', $selected_option);
 
                 if($selected_post)
                     $query->where('selected_post', '=', $selected_post);

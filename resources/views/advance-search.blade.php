@@ -61,7 +61,7 @@
                 <div class="col-md-3">
                     <div class="form-group">
                         {!! Form::label('selected', 'தேர்ந்தெடுத்தவை', ['class' => 'awesome']); !!}
-                        {!! Form::select('selected', ['0' => 'Not Selected', '1' => 'Selected'], null, ['class' => 'form-control select2', 'placeholder' => 'All']); !!}
+                        {!! Form::select('selected_option', [false => 'Not Selected', true => 'Selected'], null, ['class' => 'form-control select2', 'placeholder' => 'All']); !!}
                     </div>
                 </div>
                 <div class="col-md-3">

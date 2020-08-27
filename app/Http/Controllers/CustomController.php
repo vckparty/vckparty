@@ -38,7 +38,7 @@ use Yajra\DataTables\Facades\DataTables;
 use DB;
 use App\Mail\MyDemoMail;
 use Mail;
-use SMS;
+use Tzsk\Sms\Facade\Sms;
 
 class CustomController extends Controller
 {
@@ -332,6 +332,8 @@ class CustomController extends Controller
     {
         $pondicheryapplication = Pondicheryapplication::create($request->all());
 
+        $phone = $request->input('whatsapp_number');
+
         if ($request->input('photo', false)) {
             $pondicheryapplication->addMedia(storage_path('tmp/uploads/' . $request->input('photo')))->toMediaCollection('photo');
         }
@@ -349,10 +351,17 @@ class CustomController extends Controller
         }
 
         $myEmail = $request->input('email');
+
         if (!empty($myEmail)) {
       
             Mail::to($myEmail)->send(new MyDemoMail());
         }
+
+        //$mobile = $request->input('whatsapp_number');
+        
+        Sms::send("உங்களது விண்ணப்பம் ஏற்றுக்கொள்ளப்பட்டது. நன்றி - தலைமையகம், விசிக.", function($sms) {
+            $sms->to(['.$phone.']); # The numbers to send to.
+        });
 
         
         

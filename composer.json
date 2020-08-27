@@ -13,7 +13,6 @@
         "bugsnag/bugsnag-laravel": "^2.17",
         "doctrine/dbal": "^2.9",
         "fideloper/proxy": "^4.0",
-        "insense/laravel-sms": "^1.0",
         "laravel/framework": "^6.2",
         "laravel/passport": "^7.4",
         "laravel/tinker": "^1.0",
@@ -21,6 +20,7 @@
         "laraveldaily/laravel-charts": "^0.1.10",
         "simplesoftwareio/simple-qrcode": "^3.0",
         "spatie/laravel-medialibrary": "^7.12",
+        "tzsk/sms": "^4.0",
         "yajra/laravel-datatables-oracle": "^9.7"
     },
     "require-dev": {

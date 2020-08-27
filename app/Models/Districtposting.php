@@ -15,6 +15,10 @@ class Districtposting extends Model implements HasMedia
 
     public $table = 'districtpostings';
 
+     protected $selected_option = [
+    'selected' => 'boolean',
+    ];
+    
     protected $appends = [
         'photo',
         'documentation',
@@ -69,6 +73,8 @@ class Districtposting extends Model implements HasMedia
         'updated_at',
         'deleted_at',
     ];
+
+   
 
     public function registerMediaConversions(Media $media = null)
     {

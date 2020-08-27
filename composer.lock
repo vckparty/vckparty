@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "816fef0d1387ccb48d52f1f0ad6fcca5",
+    "content-hash": "16d2eed7bc0354afcd240b45807a8077",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -1347,56 +1347,6 @@
             "time": "2019-07-01T23:21:34+00:00"
         },
         {
-            "name": "insense/laravel-sms",
-            "version": "1.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/insenseanalytics/sms-laravel-msg91-textlocal.git",
-                "reference": "c45a45d39e3a88e817b5fc734c5a9c775793acd0"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/insenseanalytics/sms-laravel-msg91-textlocal/zipball/c45a45d39e3a88e817b5fc734c5a9c775793acd0",
-                "reference": "c45a45d39e3a88e817b5fc734c5a9c775793acd0",
-                "shasum": ""
-            },
-            "require": {
-                "guzzlehttp/guzzle": "^6.2",
-                "php": ">=5.5.9"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "~5.0"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "Insense\\LaravelSMS\\Providers\\SMSChannelServiceProvider"
-                    ],
-                    "aliases": {
-                        "Debugbar": "Insense\\LaravelSMS\\Facades\\SMS"
-                    }
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Insense\\LaravelSMS\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Amit Kumar Kannaujiya",
-                    "email": "amit.kannaujiya@insenseanalytics.com"
-                }
-            ],
-            "description": "This package will provide SMS facility to SMS Channels",
-            "time": "2018-08-06T07:07:46+00:00"
-        },
-        {
             "name": "intervention/image",
             "version": "2.5.1",
             "source": {
@@ -1558,16 +1508,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v6.18.31",
+            "version": "v6.18.32",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "a731824421f9ebc586728ea9c7cff231a249aaa9"
+                "reference": "5f933aac51819af3a1cbb4d0233ee307b7c8e757"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/a731824421f9ebc586728ea9c7cff231a249aaa9",
-                "reference": "a731824421f9ebc586728ea9c7cff231a249aaa9",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/5f933aac51819af3a1cbb4d0233ee307b7c8e757",
+                "reference": "5f933aac51819af3a1cbb4d0233ee307b7c8e757",
                 "shasum": ""
             },
             "require": {
@@ -1702,7 +1652,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2020-07-27T18:23:18+00:00"
+            "time": "2020-08-04T14:35:59+00:00"
         },
         {
             "name": "laravel/passport",
@@ -2532,16 +2482,16 @@
         },
         {
             "name": "nesbot/carbon",
-            "version": "2.37.0",
+            "version": "2.38.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/briannesbitt/Carbon.git",
-                "reference": "1f61206de973d67f36ce50f041c792ddac663c3e"
+                "reference": "d8f6a6a91d1eb9304527b040500f61923e97674b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/1f61206de973d67f36ce50f041c792ddac663c3e",
-                "reference": "1f61206de973d67f36ce50f041c792ddac663c3e",
+                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/d8f6a6a91d1eb9304527b040500f61923e97674b",
+                "reference": "d8f6a6a91d1eb9304527b040500f61923e97674b",
                 "shasum": ""
             },
             "require": {
@@ -2556,7 +2506,7 @@
                 "kylekatarnls/multi-tester": "^2.0",
                 "phpmd/phpmd": "^2.8",
                 "phpstan/extension-installer": "^1.0",
-                "phpstan/phpstan": "^0.12.30",
+                "phpstan/phpstan": "^0.12.35",
                 "phpunit/phpunit": "^7.5 || ^8.0",
                 "squizlabs/php_codesniffer": "^3.4"
             },
@@ -2607,7 +2557,7 @@
                 "datetime",
                 "time"
             ],
-            "time": "2020-07-28T06:04:54+00:00"
+            "time": "2020-08-04T19:12:46+00:00"
         },
         {
             "name": "nikic/php-parser",
@@ -4570,7 +4520,7 @@
         },
         {
             "name": "symfony/polyfill-ctype",
-            "version": "v1.18.0",
+            "version": "v1.18.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-ctype.git",
@@ -4632,7 +4582,7 @@
         },
         {
             "name": "symfony/polyfill-iconv",
-            "version": "v1.18.0",
+            "version": "v1.18.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-iconv.git",
@@ -4695,16 +4645,16 @@
         },
         {
             "name": "symfony/polyfill-intl-idn",
-            "version": "v1.18.0",
+            "version": "v1.18.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-intl-idn.git",
-                "reference": "bc6549d068d0160e0f10f7a5a23c7d1406b95ebe"
+                "reference": "5dcab1bc7146cf8c1beaa4502a3d9be344334251"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-intl-idn/zipball/bc6549d068d0160e0f10f7a5a23c7d1406b95ebe",
-                "reference": "bc6549d068d0160e0f10f7a5a23c7d1406b95ebe",
+                "url": "https://api.github.com/repos/symfony/polyfill-intl-idn/zipball/5dcab1bc7146cf8c1beaa4502a3d9be344334251",
+                "reference": "5dcab1bc7146cf8c1beaa4502a3d9be344334251",
                 "shasum": ""
             },
             "require": {
@@ -4762,11 +4712,11 @@
                 "portable",
                 "shim"
             ],
-            "time": "2020-07-14T12:35:20+00:00"
+            "time": "2020-08-04T06:02:08+00:00"
         },
         {
             "name": "symfony/polyfill-intl-normalizer",
-            "version": "v1.18.0",
+            "version": "v1.18.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-intl-normalizer.git",
@@ -4833,7 +4783,7 @@
         },
         {
             "name": "symfony/polyfill-mbstring",
-            "version": "v1.18.0",
+            "version": "v1.18.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
@@ -4896,7 +4846,7 @@
         },
         {
             "name": "symfony/polyfill-php70",
-            "version": "v1.18.0",
+            "version": "v1.18.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php70.git",
@@ -4959,7 +4909,7 @@
         },
         {
             "name": "symfony/polyfill-php72",
-            "version": "v1.18.0",
+            "version": "v1.18.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php72.git",
@@ -5018,7 +4968,7 @@
         },
         {
             "name": "symfony/polyfill-php73",
-            "version": "v1.18.0",
+            "version": "v1.18.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php73.git",
@@ -5080,7 +5030,7 @@
         },
         {
             "name": "symfony/polyfill-php80",
-            "version": "v1.18.0",
+            "version": "v1.18.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php80.git",
@@ -5658,6 +5608,89 @@
             "description": "CssToInlineStyles is a class that enables you to convert HTML-pages/files into HTML-pages/files with inline styles. This is very useful when you're sending emails.",
             "homepage": "https://github.com/tijsverkoyen/CssToInlineStyles",
             "time": "2020-07-13T06:12:54+00:00"
+        },
+        {
+            "name": "tzsk/sms",
+            "version": "4.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tzsk/sms.git",
+                "reference": "c27002c70116dc5921703eebc55a2ccae2713527"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tzsk/sms/zipball/c27002c70116dc5921703eebc55a2ccae2713527",
+                "reference": "c27002c70116dc5921703eebc55a2ccae2713527",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/guzzle": "~6.2",
+                "illuminate/support": "~5.7|~5.8|^6.0|^7.0",
+                "php": "^7.2"
+            },
+            "require-dev": {
+                "aws/aws-sdk-php": "^3.87",
+                "kavenegar/php": "^1.2",
+                "mediaburst/clockworksms": "^2.0",
+                "melipayamak/php": "^0.1.0 || ^1.0.0",
+                "nexmo/client": "^1.6 || ^2.0",
+                "orchestra/testbench": "~3.7|~3.8|^4.0|^5.0",
+                "phpunit/phpunit": "^8.0|^9.0",
+                "smsgatewayme/client": "^0.0.1",
+                "squizlabs/php_codesniffer": "^2.3 || ^3.0",
+                "twilio/sdk": "^5.27 || ^6.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "Tzsk\\Sms\\Provider\\SmsServiceProvider"
+                    ],
+                    "aliases": {
+                        "Sms": "Tzsk\\Sms\\Facade\\Sms"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Tzsk\\Sms\\": "src"
+                },
+                "files": [
+                    "src/helpers.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Kazi Mainuddin Ahmed",
+                    "email": "mailtokmahmed@gmail.com",
+                    "homepage": "https://github.com/tzsk",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Laravel SMS Gateway Integration Package",
+            "homepage": "https://github.com/tzsk/sms",
+            "keywords": [
+                "laravel SMS gateway me",
+                "laravel farazsms",
+                "laravel kavenegar",
+                "laravel link mobility",
+                "laravel melipayamak",
+                "laravel sms gateway",
+                "laravel smsir",
+                "laravel textlocal",
+                "laravel tsms",
+                "laravel twilio",
+                "sms",
+                "tzsk"
+            ],
+            "time": "2020-06-11T18:24:44+00:00"
         },
         {
             "name": "vlucas/phpdotenv",
