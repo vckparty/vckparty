@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Http\Controllers\Traits\MediaUploadingTrait;
 use App\Http\Requests\MassDestroyApplicationRequest;
 use App\Http\Requests\StoreApplicationRequest;
@@ -22,9 +21,9 @@ use App\Models\Post;
 use App\Models\Subcategory;
 use App\Models\Townpanchayat;
 use App\Models\Townvattam;
-use App\Http\Requests\MassDestroyPondicheryapplicationRequest;
 use App\Http\Requests\StorePondicheryapplicationRequest;
 use App\Http\Requests\UpdatePondicheryapplicationRequest;
+use App\Http\Requests\MassDestroyPondicheryapplicationRequest;
 use App\Models\CategoryPondichery;
 use App\Models\Districtspondichery;
 use App\Models\Pondicheryapplication;
@@ -32,12 +31,13 @@ use App\Models\Pondicheryassembly;
 use App\Models\SubcategoryPondichery;
 use App\Models\Subsubcategory;
 use Gate;
+use Illuminate\Http\Request;
 use Spatie\MediaLibrary\Models\Media;
 use Symfony\Component\HttpFoundation\Response;
 use Yajra\DataTables\Facades\DataTables;
 use DB;
-use App\Mail\MyDemoMail;
 use Mail;
+use App\Mail\MyDemoMail;
 use Tzsk\Sms\Facade\Sms;
 
 class CustomController extends Controller
@@ -332,8 +332,7 @@ class CustomController extends Controller
     {
         $pondicheryapplication = Pondicheryapplication::create($request->all());
 
-        $phone = $request->input('whatsapp_number');
-
+       
         if ($request->input('photo', false)) {
             $pondicheryapplication->addMedia(storage_path('tmp/uploads/' . $request->input('photo')))->toMediaCollection('photo');
         }
@@ -357,13 +356,11 @@ class CustomController extends Controller
             Mail::to($myEmail)->send(new MyDemoMail());
         }
 
-        //$mobile = $request->input('whatsapp_number');
-        
-        Sms::send("உங்களது விண்ணப்பம் ஏற்றுக்கொள்ளப்பட்டது. நன்றி - தலைமையகம், விசிக.", function($sms) {
-            $sms->to(['.$phone.']); # The numbers to send to.
-        });
+        $mobile = $request->input('whatsapp_number');
 
-        
+
+        Sms::send("உங்களது விண்ணப்பம் ஏற்றுக்கொள்ளப்பட்டது. நன்றி - தலைமையகம், விசிக.")->to(['9344064631', '9884365486'])->dispatch();
+
         
         return redirect()->back()->with('message', 'உங்களது விண்ணப்பம் ஏற்றுக்கொள்ளப்பட்டது. நன்றி - தலைமையகம், விசிக.');
 
