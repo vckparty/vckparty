@@ -114,13 +114,13 @@
 </head>
 <body>
     <div class="flex-center position-ref">
-        <img src="images/header.png" class="flex-center" style="text-align: center;">
+        <img src="{{ asset('images/header.png') }}" class="flex-center" style="text-align: center;">
     </div>
 <div class="flex-center position-ref full-height">
     <div class="content">
         <br><br>
         <div class="links">
-            <a class="btn" href="{{ url('application-pondichery') }}"><img border="0" alt="apply button" src="images/button-py.png"></a>
+            <a class="btn" href="{{ url('application-pondichery') }}"><img border="0" alt="apply button" src="{{ asset('images/button-py.png') }}"></a>
         </div>
     </div>
 </div>
