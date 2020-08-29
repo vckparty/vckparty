@@ -120,7 +120,7 @@
     <div class="content">
         <br><br>
         <div class="links">
-            <a class="btn" href="{{ url('application-pondichery') }}"><img border="0" alt="apply button" src="images/button.png"></a>
+            <a class="btn" href="{{ url('application-pondichery') }}"><img border="0" alt="apply button" src="images/button-py.png"></a>
         </div>
     </div>
 </div>
