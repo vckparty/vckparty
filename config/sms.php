@@ -23,11 +23,11 @@ return [
     */
     'drivers' => [
         'sns' => [ // Install: composer require aws/aws-sdk-php
-            'key' => 'Your AWS SNS Access Key',
-            'secret' => 'Your AWS SNS Secret Key',
-            'region' => 'Your AWS SNS Region',
-            'sender' => 'Your AWS SNS Sender ID',
-            'type' => 'Tansactional', // Or: 'Promotional'
+            'key' => 'AKIAI5QIFSNVVKA7HI3Q',
+            'secret' => 'IPbrutek6NeK2ibUttlZEEvx+d74j5+itNRsZi0U',
+            'region' => 'ap-south-1',
+            'sender' => 'VCKPTY17',
+            'type' => 'Promotional', // Or: 'Promotional'
         ],
         'textlocal' => [
             'url' => 'http://api.textlocal.in/send/', // Country Wise this may change.

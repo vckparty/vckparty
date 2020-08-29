@@ -358,11 +358,12 @@ class CustomController extends Controller
 
         $mobile = $request->input('whatsapp_number');
 
-
-        Sms::send("உங்களது விண்ணப்பம் ஏற்றுக்கொள்ளப்பட்டது. நன்றி - தலைமையகம், விசிக.")->to(['9344064631', '9884365486'])->dispatch();
+        Sms::send("உங்களது விண்ணப்பம் கிடைத்தது. நன்றி - தலைமையகம், விசிக.", function($sms) {
+            $sms->to(['919344064631', '919884365486']);
+        });
 
         
-        return redirect()->back()->with('message', 'உங்களது விண்ணப்பம் ஏற்றுக்கொள்ளப்பட்டது. நன்றி - தலைமையகம், விசிக.');
+        return redirect()->back()->with('message', 'உங்களது விண்ணப்பம் கிடைத்தது. நன்றி - தலைமையகம், விசிக.');
 
     }
 }
