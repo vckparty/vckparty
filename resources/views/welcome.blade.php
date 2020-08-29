@@ -114,7 +114,7 @@
 </head>
 <body>
     <div class="flex-center position-ref">
-        <img src="images/banner.png" class="flex-center" style="text-align: center;">
+        <img src="images/header.png" class="flex-center" style="text-align: center;">
     </div>
 <div class="flex-center position-ref full-height">
     <div class="content">
