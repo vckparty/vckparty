@@ -429,6 +429,7 @@
                 @endif
                 <span class="help-block">{{ trans('cruds.pondicheryapplication.fields.documents_helper') }}</span>
             </div>
+            @captcha
             <div class="form-group">
                 <button class="btn btn-danger" type="submit">
                     {{ trans('global.save') }}
@@ -634,7 +635,7 @@
 <script>
     Dropzone.options.photoDropzone = {
     url: '{{ route('admin.applications.storeMedia') }}',
-    maxFilesize: 1, // MB
+    maxFilesize: 5, // MB
     acceptedFiles: '.jpeg,.jpg,.png,.gif',
     maxFiles: 1,
     addRemoveLinks: true,
@@ -642,9 +643,9 @@
       'X-CSRF-TOKEN': "{{ csrf_token() }}"
     },
     params: {
-      size: 1,
-      width: 132,
-      height: 170
+      size: 5,
+      width: 4096,
+      height: 4096
     },
     success: function (file, response) {
       $('form').find('input[name="photo"]').remove()
@@ -689,13 +690,13 @@
     var uploadedPaymentReceiptMap = {}
 Dropzone.options.paymentReceiptDropzone = {
     url: '{{ route('admin.applications.storeMedia') }}',
-    maxFilesize: 2, // MB
+    maxFilesize: 5, // MB
     addRemoveLinks: true,
     headers: {
       'X-CSRF-TOKEN': "{{ csrf_token() }}"
     },
     params: {
-      size: 2
+      size: 5
     },
     success: function (file, response) {
       $('form').append('<input type="hidden" name="payment_receipt[]" value="' + response.name + '">')
@@ -745,13 +746,13 @@ Dropzone.options.paymentReceiptDropzone = {
     var uploadedDocumentsMap = {}
 Dropzone.options.documentsDropzone = {
     url: '{{ route('admin.applications.storeMedia') }}',
-    maxFilesize: 3, // MB
+    maxFilesize: 10, // MB
     addRemoveLinks: true,
     headers: {
       'X-CSRF-TOKEN': "{{ csrf_token() }}"
     },
     params: {
-      size: 3
+      size: 10
     },
     success: function (file, response) {
       $('form').append('<input type="hidden" name="documents[]" value="' + response.name + '">')

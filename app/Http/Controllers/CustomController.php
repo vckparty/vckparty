@@ -30,7 +30,6 @@ use App\Models\Pondicheryapplication;
 use App\Models\Pondicheryassembly;
 use App\Models\SubcategoryPondichery;
 use App\Models\Subsubcategory;
-use Gate;
 use Illuminate\Http\Request;
 use Spatie\MediaLibrary\Models\Media;
 use Symfony\Component\HttpFoundation\Response;
