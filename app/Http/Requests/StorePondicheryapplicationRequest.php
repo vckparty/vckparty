@@ -92,7 +92,7 @@ class StorePondicheryapplicationRequest extends FormRequest
                 'required',
             ],
             'captcha'               => [
-                'required|captcha',
+                'required',
             ],
         ];
     }
