@@ -91,6 +91,9 @@ class StorePondicheryapplicationRequest extends FormRequest
             'payment_receipt.*'     => [
                 'required',
             ],
+            'captcha'               => [
+                'required|captcha',
+            ],
         ];
     }
 }

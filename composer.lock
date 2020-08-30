@@ -4,67 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6bd60aec9b704c7940dc1752723cdd1b",
+    "content-hash": "62cd152fb8240cb81f19fa78011deb5d",
     "packages": [
-        {
-            "name": "albertcht/invisible-recaptcha",
-            "version": "v1.9.4",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/albertcht/invisible-recaptcha.git",
-                "reference": "dd74d80e8e10d27bced23ac8fad4c8ac0f3c4728"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/albertcht/invisible-recaptcha/zipball/dd74d80e8e10d27bced23ac8fad4c8ac0f3c4728",
-                "reference": "dd74d80e8e10d27bced23ac8fad4c8ac0f3c4728",
-                "shasum": ""
-            },
-            "require": {
-                "guzzlehttp/guzzle": "^6.2",
-                "illuminate/support": "^5.0|^6.0|^7.0",
-                "php": "^5.6.4 || ^7.0"
-            },
-            "require-dev": {
-                "illuminate/view": "^5.0|^6.0|^7.0",
-                "phpunit/phpunit": "^8.0"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "AlbertCht\\InvisibleReCaptcha\\InvisibleReCaptchaServiceProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "AlbertCht\\InvisibleReCaptcha\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Albert Chen",
-                    "homepage": "https://www.albert-chen.com"
-                }
-            ],
-            "description": "Invisible reCAPTCHA For Laravel.",
-            "keywords": [
-                "captcha",
-                "invisible",
-                "invisible-recaptcha",
-                "laravel",
-                "laravel5",
-                "no-captcha",
-                "php",
-                "recaptcha"
-            ],
-            "time": "2020-03-18T15:46:48+00:00"
-        },
         {
             "name": "bacon/bacon-qr-code",
             "version": "2.0.0",
@@ -169,6 +110,65 @@
                 "pdf"
             ],
             "time": "2020-02-25T20:44:34+00:00"
+        },
+        {
+            "name": "bonecms/laravel-captcha",
+            "version": "v2.2.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/igoshev/laravel-captcha.git",
+                "reference": "3854d9706d14dcf3fd20cdee786c58c9e59a47a1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/igoshev/laravel-captcha/zipball/3854d9706d14dcf3fd20cdee786c58c9e59a47a1",
+                "reference": "3854d9706d14dcf3fd20cdee786c58c9e59a47a1",
+                "shasum": ""
+            },
+            "require": {
+                "ext-gd": "*",
+                "illuminate/config": "^5.5|^6.0|^7.0",
+                "illuminate/http": "^5.5|^6.0|^7.0",
+                "illuminate/routing": "^5.5|^6.0|^7.0",
+                "illuminate/session": "^5.5|^6.0|^7.0",
+                "illuminate/support": "^5.5|^6.0|^7.0",
+                "illuminate/translation": "^5.5|^6.0|^7.0",
+                "illuminate/view": "^5.5|^6.0|^7.0",
+                "php": ">=7.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.2-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "Igoshev\\Captcha\\Providers\\CaptchaServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Igoshev\\Captcha\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Dmitriy Igoshev",
+                    "email": "dmitry.igo@gmail.com"
+                }
+            ],
+            "description": "Captcha integration for Laravel",
+            "homepage": "https://github.com/igoshev/laravel-captcha",
+            "keywords": [
+                "Laravel Captcha",
+                "captcha"
+            ],
+            "time": "2020-08-11T15:37:29+00:00"
         },
         {
             "name": "bugsnag/bugsnag",

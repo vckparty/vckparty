@@ -430,8 +430,10 @@
                 <span class="help-block">{{ trans('cruds.pondicheryapplication.fields.documents_helper') }}</span>
             </div>
             @captcha
+            <input type="text" id="captcha" name="captcha" autocomplete="off">
+            <hr>
             <div class="form-group">
-                <button class="btn btn-danger" type="submit">
+                <button class="btn btn-info col-md-3" type="submit">
                     {{ trans('global.save') }}
                 </button>
             </div>

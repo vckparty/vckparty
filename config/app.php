@@ -166,7 +166,7 @@ return [
          * Package Service Providers...
          */
         Bugsnag\BugsnagLaravel\BugsnagServiceProvider::class,
-        AlbertCht\InvisibleReCaptcha\InvisibleReCaptchaServiceProvider::class,
+        Igoshev\Captcha\Providers\CaptchaServiceProvider::class,
         /*
          * Application Service Providers...
          */
