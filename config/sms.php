@@ -30,7 +30,7 @@ return [
             'type' => 'Promotional', // Or: 'Promotional'
         ],
         'textlocal' => [
-            'url' => 'http://api.textlocal.in/send/', // Country Wise this may change.
+            'url' => 'https://api.textlocal.in/send/', // Country Wise this may change.
             'username' => 'dheekshakrr@gmail.com',
             'hash' => 'Yamuna@8686',
             'sender' => 'TXTLCL',

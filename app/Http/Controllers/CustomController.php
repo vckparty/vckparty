@@ -37,7 +37,7 @@ use Yajra\DataTables\Facades\DataTables;
 use DB;
 use Mail;
 use App\Mail\MyDemoMail;
-use Tzsk\Sms\Facade\Sms;
+use Nexmo\Laravel\Facade\Nexmo;
 
 class CustomController extends Controller
 {
@@ -355,13 +355,12 @@ class CustomController extends Controller
             Mail::to($myEmail)->send(new MyDemoMail());
         }
 
-        $mobile = $request->input('whatsapp_number');
+        Nexmo::message()->send([
+            'to'   => '91' . $request->input('whatsapp_number'),
+            'from' => 'Vonage APIs',
+            'text' => 'உங்களது விண்ணப்பம் கிடைத்தது. நன்றி - தலைமையகம், விசிக.'
+        ]);
 
-        Sms::send("உங்களது விண்ணப்பம் கிடைத்தது. நன்றி - தலைமையகம், விசிக.", function($sms) {
-            $sms->to(['919344064631', '919884365486']);
-        });
-
-        
         return redirect()->back()->with('message', 'உங்களது விண்ணப்பம் கிடைத்தது. நன்றி - தலைமையகம், விசிக.');
 
     }

@@ -19,9 +19,10 @@
         "laravel/tinker": "^1.0",
         "laravelcollective/html": "^6.1",
         "laraveldaily/laravel-charts": "^0.1.10",
+        "nexmo/client": "^2.4",
+        "nexmo/laravel": "^2.3",
         "simplesoftwareio/simple-qrcode": "^3.0",
         "spatie/laravel-medialibrary": "^7.12",
-        "tzsk/sms": "^4.0",
         "yajra/laravel-datatables-oracle": "^9.7"
     },
     "require-dev": {
