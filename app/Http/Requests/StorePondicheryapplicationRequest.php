@@ -27,11 +27,11 @@ class StorePondicheryapplicationRequest extends FormRequest
             ],
             'whatsapp_number'       => [
                 'string',
-                'nullable',
+                'required',
             ],
             'email'                 => [
                 'string',
-                'nullable',
+                'required',
             ],
             'youtube_channel'       => [
                 'string',

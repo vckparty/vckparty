@@ -358,7 +358,8 @@ class CustomController extends Controller
         Nexmo::message()->send([
             'to'   => '91' . $request->input('whatsapp_number'),
             'from' => 'Vonage APIs',
-            'text' => 'உங்களது விண்ணப்பம் கிடைத்தது. நன்றி - தலைமையகம், விசிக.'
+            'text' => 'உங்களது விண்ணப்பம் கிடைத்தது. நன்றி - தலைமையகம், விசிக.',
+            'type' => 'unicode'
         ]);
 
         return redirect()->back()->with('message', 'உங்களது விண்ணப்பம் கிடைத்தது. நன்றி - தலைமையகம், விசிக.');

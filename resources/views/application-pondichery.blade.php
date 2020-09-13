@@ -172,26 +172,6 @@
                 <span class="help-block">{{ trans('cruds.pondicheryapplication.fields.social_medias_helper') }}</span>
             </div> -->
             <div class="form-group">
-                <label for="facebook">{{ trans('cruds.pondicheryapplication.fields.facebook') }}</label>
-                <input class="form-control {{ $errors->has('facebook') ? 'is-invalid' : '' }}" type="text" name="facebook" id="facebook" value="{{ old('facebook', '') }}">
-                @if($errors->has('facebook'))
-                    <div class="invalid-feedback">
-                        {{ $errors->first('facebook') }}
-                    </div>
-                @endif
-                <span class="help-block">{{ trans('cruds.pondicheryapplication.fields.facebook_helper') }}</span>
-            </div>
-            <div class="form-group">
-                <label for="twitter">{{ trans('cruds.pondicheryapplication.fields.twitter') }}</label>
-                <input class="form-control {{ $errors->has('twitter') ? 'is-invalid' : '' }}" type="text" name="twitter" id="twitter" value="{{ old('twitter', '') }}">
-                @if($errors->has('twitter'))
-                    <div class="invalid-feedback">
-                        {{ $errors->first('twitter') }}
-                    </div>
-                @endif
-                <span class="help-block">{{ trans('cruds.pondicheryapplication.fields.twitter_helper') }}</span>
-            </div>
-            <div class="form-group">
                 <label for="whatsapp_number">{{ trans('cruds.pondicheryapplication.fields.whatsapp_number') }}</label>
                 <input class="form-control {{ $errors->has('whatsapp_number') ? 'is-invalid' : '' }}" type="text" name="whatsapp_number" id="whatsapp_number" value="{{ old('whatsapp_number', '') }}">
                 @if($errors->has('whatsapp_number'))
@@ -210,6 +190,26 @@
                     </div>
                 @endif
                 <span class="help-block">{{ trans('cruds.pondicheryapplication.fields.email_helper') }}</span>
+            </div>
+            <div class="form-group">
+                <label for="facebook">{{ trans('cruds.pondicheryapplication.fields.facebook') }}</label>
+                <input class="form-control {{ $errors->has('facebook') ? 'is-invalid' : '' }}" type="text" name="facebook" id="facebook" value="{{ old('facebook', '') }}">
+                @if($errors->has('facebook'))
+                    <div class="invalid-feedback">
+                        {{ $errors->first('facebook') }}
+                    </div>
+                @endif
+                <span class="help-block">{{ trans('cruds.pondicheryapplication.fields.facebook_helper') }}</span>
+            </div>
+            <div class="form-group">
+                <label for="twitter">{{ trans('cruds.pondicheryapplication.fields.twitter') }}</label>
+                <input class="form-control {{ $errors->has('twitter') ? 'is-invalid' : '' }}" type="text" name="twitter" id="twitter" value="{{ old('twitter', '') }}">
+                @if($errors->has('twitter'))
+                    <div class="invalid-feedback">
+                        {{ $errors->first('twitter') }}
+                    </div>
+                @endif
+                <span class="help-block">{{ trans('cruds.pondicheryapplication.fields.twitter_helper') }}</span>
             </div>
             <div class="form-group">
                 <label for="youtube_channel">{{ trans('cruds.pondicheryapplication.fields.youtube_channel') }}</label>

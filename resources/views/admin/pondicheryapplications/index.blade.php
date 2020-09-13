@@ -1,4 +1,16 @@
 @extends('layouts.admin')
+@section('styles')
+<style type="text/css">
+  table.dataTable tbody td.select-checkbox:before, table.dataTable tbody th.select-checkbox:before {
+    content: ' ';
+    margin-top: -6px;
+    margin-left: -6px;
+    border: 1px solid black;
+    border-radius: 3px;
+    visibility: hidden;
+  }
+</style>
+@endsection
 @section('content')
 @can('pondicheryapplication_create')
     <div style="margin-bottom: 10px;" class="row">
@@ -15,11 +27,11 @@
     </div>
 
     <div class="card-body">
-        <table class=" table table-bordered table-striped table-hover ajaxTable datatable datatable-Pondicheryapplication">
+        <table class="table table-bordered table-striped table-hover ajaxTable datatable datatable-Pondicheryapplication">
             <thead>
                 <tr>
-                    <th width="10">
-
+                    <th>
+                        &nbsp;
                     </th>
                     <th>
                         {{ trans('cruds.pondicheryapplication.fields.id') }}
@@ -50,9 +62,6 @@
                     </th>
                     <th>
                         {{ trans('cruds.pondicheryapplication.fields.join_date') }}
-                    </th>
-                    <th>
-                        &nbsp;
                     </th>
                 </tr>
             </thead>
@@ -106,7 +115,7 @@
     aaSorting: [],
     ajax: "{{ route('admin.pondicheryapplications.index') }}",
     columns: [
-      { data: 'placeholder', name: 'placeholder' },
+{ data: 'actions', name: '{{ trans('global.actions') }}' },
 { data: 'id', name: 'id' },
 { data: 'name', name: 'name' },
 { data: 'subsubcategory_name', name: 'subsubcategory.name' },
@@ -116,8 +125,7 @@
 { data: 'current_post', name: 'current_post' },
 { data: 'dob', name: 'dob' },
 { data: 'profession', name: 'profession' },
-{ data: 'join_date', name: 'join_date' },
-{ data: 'actions', name: '{{ trans('global.actions') }}' }
+{ data: 'join_date', name: 'join_date' }
     ],
     orderCellsTop: true,
     order: [[ 1, 'asc' ]],
