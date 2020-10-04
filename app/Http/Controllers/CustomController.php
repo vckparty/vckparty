@@ -355,12 +355,12 @@ class CustomController extends Controller
             Mail::to($myEmail)->send(new MyDemoMail());
         }
 
-        Nexmo::message()->send([
-            'to'   => '91' . $request->input('whatsapp_number'),
-            'from' => 'Vonage APIs',
-            'text' => 'உங்களது விண்ணப்பம் கிடைத்தது. நன்றி - தலைமையகம், விசிக.',
-            'type' => 'unicode'
-        ]);
+        // Nexmo::message()->send([
+        //     'to'   => '91' . $request->input('whatsapp_number'),
+        //     'from' => 'Vonage APIs',
+        //     'text' => 'உங்களது விண்ணப்பம் கிடைத்தது. நன்றி - தலைமையகம், விசிக.',
+        //     'type' => 'unicode'
+        // ]);
 
         return redirect()->back()->with('message', 'உங்களது விண்ணப்பம் கிடைத்தது. நன்றி - தலைமையகம், விசிக.');
 
