@@ -348,19 +348,19 @@ class CustomController extends Controller
             Media::whereIn('id', $media)->update(['model_id' => $pondicheryapplication->id]);
         }
 
-        $myEmail = $request->input('email');
-
-        if (!empty($myEmail)) {
-      
-            Mail::to($myEmail)->send(new MyDemoMail());
-        }
-
         // Nexmo::message()->send([
         //     'to'   => '91' . $request->input('whatsapp_number'),
         //     'from' => 'Vonage APIs',
         //     'text' => 'உங்களது விண்ணப்பம் கிடைத்தது. நன்றி - தலைமையகம், விசிக.',
         //     'type' => 'unicode'
         // ]);
+
+        $myEmail = $request->input('email');
+
+        if (!empty($myEmail)) {
+      
+            Mail::to($myEmail)->send(new MyDemoMail());
+        }
 
         return redirect()->back()->with('message', 'உங்களது விண்ணப்பம் கிடைத்தது. நன்றி - தலைமையகம், விசிக.');
 

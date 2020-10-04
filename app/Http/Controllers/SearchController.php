@@ -36,8 +36,7 @@ class SearchController extends Controller
         $selected_option = $request->get('selected_option');
         $selected_post = $request->get('selected_post');
         
-        $searchResults = DB::table('districtpostings')
-            ->where(function($query) use ($name, $district1, $applied_post, $current_post, $assembly_name, $social_division, $selected_option, $selected_post) {
+        $searchResults = Districtposting::where(function($query) use ($name, $district1, $applied_post, $current_post, $assembly_name, $social_division, $selected_option, $selected_post) {
                 
                 if($name)
                     $query->where('name', 'like', '%'.$name.'%');
@@ -79,8 +78,7 @@ class SearchController extends Controller
         $social_division = $request->get('social_division');
         $selected_post = $request->get('selected_post');
 
-        $searchResults = DB::table('districtpostings')
-            ->whereRaw('selected_post <> ""')
+        $searchResults = Districtposting::whereRaw('selected_post <> ""')
             ->where(function($query) use ($district1, $assembly_name, $social_division, $selected_post) {
 
                 if($district1)
