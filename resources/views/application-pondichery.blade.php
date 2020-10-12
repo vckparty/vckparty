@@ -91,7 +91,7 @@
             </div>
             <div class="form-group">
                 <label for="categorypondichery_id">{{ trans('cruds.pondicheryapplication.fields.categorypondichery') }}</label>
-                <select class="form-control select2 {{ $errors->has('categorypondichery') ? 'is-invalid' : '' }}" name="categorypondichery_id" id="categorypondichery">
+                <select class="form-control select2 {{ $errors->has('categorypondichery') ? 'is-invalid' : '' }}" name="categorypondichery_id" id="categorypondichery" required>
                     @foreach($categorypondicheries as $id => $categorypondichery)
                         <option value="{{ $id }}" {{ old('categorypondichery_id') == $id ? 'selected' : '' }}>{{ $categorypondichery }}</option>
                     @endforeach
@@ -106,7 +106,7 @@
             <div class="form-group">
                 <label for="subcategorypondichery_id">அமைப்பு</label>
                 
-                <select name="subcategorypondichery_id" id="subcategorypondichery" class="form-control">
+                <select name="subcategorypondichery_id" id="subcategorypondichery" class="form-control" required>
                     
                 </select>
                 @if($errors->has('subcategorypondichery'))
@@ -118,7 +118,7 @@
             </div>
             <div class="form-group">
                 <label for="subsubcategory_id">விரும்பும் பொறுப்பு</label>
-                <select name="subsubcategory_id" id="subsubcategory" class="form-control">
+                <select name="subsubcategory_id" id="subsubcategory" class="form-control" required>
                     
                 </select>
                 @if($errors->has('subsubcategory'))
@@ -130,7 +130,7 @@
             </div>
             <div class="form-group">
                 <label for="districtspondichery_id">{{ trans('cruds.pondicheryapplication.fields.districtspondichery') }}</label>
-                <select class="form-control select2 {{ $errors->has('districtspondichery') ? 'is-invalid' : '' }}" name="districtspondichery_id" id="districtspondichery_id">
+                <select class="form-control select2 {{ $errors->has('districtspondichery') ? 'is-invalid' : '' }}" name="districtspondichery_id" id="districtspondichery_id" required>
                     @foreach($districtspondicheries as $id => $districtspondichery)
                         <option value="{{ $id }}" {{ old('districtspondichery_id') == $id ? 'selected' : '' }}>{{ $districtspondichery }}</option>
                     @endforeach
@@ -144,7 +144,7 @@
             </div>
             <div class="form-group">
                 <label for="pondicheryassemblys_id">{{ trans('cruds.pondicheryapplication.fields.pondicheryassemblys') }}</label>
-                <select class="form-control select2 {{ $errors->has('pondicheryassemblys') ? 'is-invalid' : '' }}" name="pondicheryassemblys_id" id="pondicheryassemblys_id">
+                <select class="form-control select2 {{ $errors->has('pondicheryassemblys') ? 'is-invalid' : '' }}" name="pondicheryassemblys_id" id="pondicheryassemblys_id" required>
                     @foreach($pondicheryassemblys as $id => $pondicheryassemblys)
                         <option value="{{ $id }}" {{ old('pondicheryassemblys_id') == $id ? 'selected' : '' }}>{{ $pondicheryassemblys }}</option>
                     @endforeach
@@ -172,8 +172,8 @@
                 <span class="help-block">{{ trans('cruds.pondicheryapplication.fields.social_medias_helper') }}</span>
             </div> -->
             <div class="form-group">
-                <label for="whatsapp_number">{{ trans('cruds.pondicheryapplication.fields.whatsapp_number') }}</label>
-                <input class="form-control {{ $errors->has('whatsapp_number') ? 'is-invalid' : '' }}" type="text" name="whatsapp_number" id="whatsapp_number" value="{{ old('whatsapp_number', '') }}">
+                <label for="whatsapp_number">Phone Number / Whatsapp Number</label>
+                <input class="form-control {{ $errors->has('whatsapp_number') ? 'is-invalid' : '' }}" type="text" name="whatsapp_number" id="whatsapp_number" value="{{ old('whatsapp_number', '') }}" required>
                 @if($errors->has('whatsapp_number'))
                     <div class="invalid-feedback">
                         {{ $errors->first('whatsapp_number') }}
@@ -183,7 +183,7 @@
             </div>
             <div class="form-group">
                 <label for="email">{{ trans('cruds.pondicheryapplication.fields.email') }}</label>
-                <input class="form-control {{ $errors->has('email') ? 'is-invalid' : '' }}" type="text" name="email" id="email" value="{{ old('email', '') }}">
+                <input class="form-control {{ $errors->has('email') ? 'is-invalid' : '' }}" type="text" name="email" id="email" value="{{ old('email', '') }}" required>
                 @if($errors->has('email'))
                     <div class="invalid-feedback">
                         {{ $errors->first('email') }}
@@ -637,7 +637,7 @@
 <script>
     Dropzone.options.photoDropzone = {
     url: '{{ route('admin.applications.storeMedia') }}',
-    maxFilesize: 5, // MB
+    maxFilesize: 10, // MB
     acceptedFiles: '.jpeg,.jpg,.png,.gif',
     maxFiles: 1,
     addRemoveLinks: true,
@@ -645,9 +645,7 @@
       'X-CSRF-TOKEN': "{{ csrf_token() }}"
     },
     params: {
-      size: 5,
-      width: 4096,
-      height: 4096
+      size: 10
     },
     success: function (file, response) {
       $('form').find('input[name="photo"]').remove()
@@ -692,13 +690,13 @@
     var uploadedPaymentReceiptMap = {}
 Dropzone.options.paymentReceiptDropzone = {
     url: '{{ route('admin.applications.storeMedia') }}',
-    maxFilesize: 5, // MB
+    maxFilesize: 10, // MB
     addRemoveLinks: true,
     headers: {
       'X-CSRF-TOKEN': "{{ csrf_token() }}"
     },
     params: {
-      size: 5
+      size: 10
     },
     success: function (file, response) {
       $('form').append('<input type="hidden" name="payment_receipt[]" value="' + response.name + '">')
@@ -748,13 +746,13 @@ Dropzone.options.paymentReceiptDropzone = {
     var uploadedDocumentsMap = {}
 Dropzone.options.documentsDropzone = {
     url: '{{ route('admin.applications.storeMedia') }}',
-    maxFilesize: 10, // MB
+    maxFilesize: 20, // MB
     addRemoveLinks: true,
     headers: {
       'X-CSRF-TOKEN': "{{ csrf_token() }}"
     },
     params: {
-      size: 10
+      size: 20
     },
     success: function (file, response) {
       $('form').append('<input type="hidden" name="documents[]" value="' + response.name + '">')

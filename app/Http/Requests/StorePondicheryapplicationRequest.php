@@ -85,6 +85,9 @@ class StorePondicheryapplicationRequest extends FormRequest
             'communication_address' => [
                 'required',
             ],
+            'photo.*' => [
+                'required',
+            ],
             'payment_status'        => [
                 'string',
                 'required',
