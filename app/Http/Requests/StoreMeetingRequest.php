@@ -23,7 +23,7 @@ class StoreMeetingRequest extends FormRequest
                 'string',
                 'required',
             ],
-            'photo'                     => [
+            'photo.*'                     => [
                 'required',
             ],
             'block_area_town_vattam'    => [
