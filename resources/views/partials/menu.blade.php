@@ -26,7 +26,7 @@
                 <ul class="c-sidebar-nav-dropdown-items">
                     @can('districtposting_access')
                         <li class="c-sidebar-nav-item">
-                            <a href="{{ route("admin.districtpostings.index") }}" class="c-sidebar-nav-link {{ request()->is('admin/districtpostings') || request()->is('admin/districtpostings/*') ? 'active' : '' }}">
+                            <a href="{{ route("admin.districtpostings.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/districtpostings") || request()->is("admin/districtpostings/*") ? "active" : "" }}">
                                 <i class="fa-fw fas fa-user-tie c-sidebar-nav-icon">
 
                                 </i>
@@ -36,7 +36,7 @@
                     @endcan
                     @can('application_access')
                         <li class="c-sidebar-nav-item">
-                            <a href="{{ route("admin.applications.index") }}" class="c-sidebar-nav-link {{ request()->is('admin/applications') || request()->is('admin/applications/*') ? 'active' : '' }}">
+                            <a href="{{ route("admin.applications.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/applications") || request()->is("admin/applications/*") ? "active" : "" }}">
                                 <i class="fa-fw fas fa-file-alt c-sidebar-nav-icon">
 
                                 </i>
@@ -46,7 +46,7 @@
                     @endcan
                     @can('pondicheryapplication_access')
                         <li class="c-sidebar-nav-item">
-                            <a href="{{ route("admin.pondicheryapplications.index") }}" class="c-sidebar-nav-link {{ request()->is('admin/pondicheryapplications') || request()->is('admin/pondicheryapplications/*') ? 'active' : '' }}">
+                            <a href="{{ route("admin.pondicheryapplications.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/pondicheryapplications") || request()->is("admin/pondicheryapplications/*") ? "active" : "" }}">
                                 <i class="fa-fw fas fa-file-alt c-sidebar-nav-icon">
 
                                 </i>
@@ -57,25 +57,9 @@
                 </ul>
             </li>
         @endcan
-        <li class="c-sidebar-nav-item">
-                <a href="{{ url ("advance-search") }}" class="c-sidebar-nav-link {{ request()->is('admin/districtpostings') || request()->is('admin/districtpostings/*') ? 'active' : '' }}">
-                    <i class="fa-fw fas fa-search c-sidebar-nav-icon">
-
-                    </i>
-                    Advance Search
-                </a>
-            </li>
-            <li class="c-sidebar-nav-item">
-                <a href="{{ route("district-postings") }}" class="c-sidebar-nav-link {{ request()->is('admin/districtpostings') || request()->is('admin/districtpostings/*') ? 'active' : '' }}">
-                    <i class="fa-fw fas fa-user-tie c-sidebar-nav-icon">
-
-                    </i>
-                    Selected List
-                </a>
-            </li>
         @can('posting_access')
             <li class="c-sidebar-nav-item">
-                <a href="{{ route("admin.postings.index") }}" class="c-sidebar-nav-link {{ request()->is('admin/postings') || request()->is('admin/postings/*') ? 'active' : '' }}">
+                <a href="{{ route("admin.postings.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/postings") || request()->is("admin/postings/*") ? "active" : "" }}">
                     <i class="fa-fw fas fa-file-alt c-sidebar-nav-icon">
 
                     </i>
@@ -85,7 +69,7 @@
         @endcan
         @can('pondicheryposting_access')
             <li class="c-sidebar-nav-item">
-                <a href="{{ route("admin.pondicherypostings.index") }}" class="c-sidebar-nav-link {{ request()->is('admin/pondicherypostings') || request()->is('admin/pondicherypostings/*') ? 'active' : '' }}">
+                <a href="{{ route("admin.pondicherypostings.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/pondicherypostings") || request()->is("admin/pondicherypostings/*") ? "active" : "" }}">
                     <i class="fa-fw fas fa-file-alt c-sidebar-nav-icon">
 
                     </i>
@@ -104,7 +88,7 @@
                 <ul class="c-sidebar-nav-dropdown-items">
                     @can('category_access')
                         <li class="c-sidebar-nav-item">
-                            <a href="{{ route("admin.categories.index") }}" class="c-sidebar-nav-link {{ request()->is('admin/categories') || request()->is('admin/categories/*') ? 'active' : '' }}">
+                            <a href="{{ route("admin.categories.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/categories") || request()->is("admin/categories/*") ? "active" : "" }}">
                                 <i class="fa-fw fab fa-blogger c-sidebar-nav-icon">
 
                                 </i>
@@ -114,7 +98,7 @@
                     @endcan
                     @can('subcategory_access')
                         <li class="c-sidebar-nav-item">
-                            <a href="{{ route("admin.subcategories.index") }}" class="c-sidebar-nav-link {{ request()->is('admin/subcategories') || request()->is('admin/subcategories/*') ? 'active' : '' }}">
+                            <a href="{{ route("admin.subcategories.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/subcategories") || request()->is("admin/subcategories/*") ? "active" : "" }}">
                                 <i class="fa-fw fas fa-sort-alpha-down c-sidebar-nav-icon">
 
                                 </i>
@@ -124,7 +108,7 @@
                     @endcan
                     @can('post_access')
                         <li class="c-sidebar-nav-item">
-                            <a href="{{ route("admin.posts.index") }}" class="c-sidebar-nav-link {{ request()->is('admin/posts') || request()->is('admin/posts/*') ? 'active' : '' }}">
+                            <a href="{{ route("admin.posts.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/posts") || request()->is("admin/posts/*") ? "active" : "" }}">
                                 <i class="fa-fw fas fa-user-circle c-sidebar-nav-icon">
 
                                 </i>
@@ -134,7 +118,7 @@
                     @endcan
                     @can('district_access')
                         <li class="c-sidebar-nav-item">
-                            <a href="{{ route("admin.districts.index") }}" class="c-sidebar-nav-link {{ request()->is('admin/districts') || request()->is('admin/districts/*') ? 'active' : '' }}">
+                            <a href="{{ route("admin.districts.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/districts") || request()->is("admin/districts/*") ? "active" : "" }}">
                                 <i class="fa-fw fas fa-globe-americas c-sidebar-nav-icon">
 
                                 </i>
@@ -144,7 +128,7 @@
                     @endcan
                     @can('block_access')
                         <li class="c-sidebar-nav-item">
-                            <a href="{{ route("admin.blocks.index") }}" class="c-sidebar-nav-link {{ request()->is('admin/blocks') || request()->is('admin/blocks/*') ? 'active' : '' }}">
+                            <a href="{{ route("admin.blocks.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/blocks") || request()->is("admin/blocks/*") ? "active" : "" }}">
                                 <i class="fa-fw fas fa-map-marker c-sidebar-nav-icon">
 
                                 </i>
@@ -154,7 +138,7 @@
                     @endcan
                     @can('panchayat_access')
                         <li class="c-sidebar-nav-item">
-                            <a href="{{ route("admin.panchayats.index") }}" class="c-sidebar-nav-link {{ request()->is('admin/panchayats') || request()->is('admin/panchayats/*') ? 'active' : '' }}">
+                            <a href="{{ route("admin.panchayats.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/panchayats") || request()->is("admin/panchayats/*") ? "active" : "" }}">
                                 <i class="fa-fw fas fa-map-marked c-sidebar-nav-icon">
 
                                 </i>
@@ -164,7 +148,7 @@
                     @endcan
                     @can('townpanchayat_access')
                         <li class="c-sidebar-nav-item">
-                            <a href="{{ route("admin.townpanchayats.index") }}" class="c-sidebar-nav-link {{ request()->is('admin/townpanchayats') || request()->is('admin/townpanchayats/*') ? 'active' : '' }}">
+                            <a href="{{ route("admin.townpanchayats.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/townpanchayats") || request()->is("admin/townpanchayats/*") ? "active" : "" }}">
                                 <i class="fa-fw fas fa-globe-africa c-sidebar-nav-icon">
 
                                 </i>
@@ -174,7 +158,7 @@
                     @endcan
                     @can('townvattam_access')
                         <li class="c-sidebar-nav-item">
-                            <a href="{{ route("admin.townvattams.index") }}" class="c-sidebar-nav-link {{ request()->is('admin/townvattams') || request()->is('admin/townvattams/*') ? 'active' : '' }}">
+                            <a href="{{ route("admin.townvattams.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/townvattams") || request()->is("admin/townvattams/*") ? "active" : "" }}">
                                 <i class="fa-fw fas fa-circle c-sidebar-nav-icon">
 
                                 </i>
@@ -184,7 +168,7 @@
                     @endcan
                     @can('municipality_access')
                         <li class="c-sidebar-nav-item">
-                            <a href="{{ route("admin.municipalities.index") }}" class="c-sidebar-nav-link {{ request()->is('admin/municipalities') || request()->is('admin/municipalities/*') ? 'active' : '' }}">
+                            <a href="{{ route("admin.municipalities.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/municipalities") || request()->is("admin/municipalities/*") ? "active" : "" }}">
                                 <i class="fa-fw fas fa-building c-sidebar-nav-icon">
 
                                 </i>
@@ -194,7 +178,7 @@
                     @endcan
                     @can('municipalityvattam_access')
                         <li class="c-sidebar-nav-item">
-                            <a href="{{ route("admin.municipalityvattams.index") }}" class="c-sidebar-nav-link {{ request()->is('admin/municipalityvattams') || request()->is('admin/municipalityvattams/*') ? 'active' : '' }}">
+                            <a href="{{ route("admin.municipalityvattams.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/municipalityvattams") || request()->is("admin/municipalityvattams/*") ? "active" : "" }}">
                                 <i class="fa-fw far fa-circle c-sidebar-nav-icon">
 
                                 </i>
@@ -204,7 +188,7 @@
                     @endcan
                     @can('metropolitan_access')
                         <li class="c-sidebar-nav-item">
-                            <a href="{{ route("admin.metropolitans.index") }}" class="c-sidebar-nav-link {{ request()->is('admin/metropolitans') || request()->is('admin/metropolitans/*') ? 'active' : '' }}">
+                            <a href="{{ route("admin.metropolitans.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/metropolitans") || request()->is("admin/metropolitans/*") ? "active" : "" }}">
                                 <i class="fa-fw fas fa-hotel c-sidebar-nav-icon">
 
                                 </i>
@@ -214,7 +198,7 @@
                     @endcan
                     @can('area_access')
                         <li class="c-sidebar-nav-item">
-                            <a href="{{ route("admin.areas.index") }}" class="c-sidebar-nav-link {{ request()->is('admin/areas') || request()->is('admin/areas/*') ? 'active' : '' }}">
+                            <a href="{{ route("admin.areas.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/areas") || request()->is("admin/areas/*") ? "active" : "" }}">
                                 <i class="fa-fw fas fa-globe c-sidebar-nav-icon">
 
                                 </i>
@@ -224,7 +208,7 @@
                     @endcan
                     @can('metrovattam_access')
                         <li class="c-sidebar-nav-item">
-                            <a href="{{ route("admin.metrovattams.index") }}" class="c-sidebar-nav-link {{ request()->is('admin/metrovattams') || request()->is('admin/metrovattams/*') ? 'active' : '' }}">
+                            <a href="{{ route("admin.metrovattams.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/metrovattams") || request()->is("admin/metrovattams/*") ? "active" : "" }}">
                                 <i class="fa-fw fas fa-dot-circle c-sidebar-nav-icon">
 
                                 </i>
@@ -234,7 +218,7 @@
                     @endcan
                     @can('assembly_access')
                         <li class="c-sidebar-nav-item">
-                            <a href="{{ route("admin.assemblies.index") }}" class="c-sidebar-nav-link {{ request()->is('admin/assemblies') || request()->is('admin/assemblies/*') ? 'active' : '' }}">
+                            <a href="{{ route("admin.assemblies.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/assemblies") || request()->is("admin/assemblies/*") ? "active" : "" }}">
                                 <i class="fa-fw fas fa-user-graduate c-sidebar-nav-icon">
 
                                 </i>
@@ -256,7 +240,7 @@
                 <ul class="c-sidebar-nav-dropdown-items">
                     @can('category_pondichery_access')
                         <li class="c-sidebar-nav-item">
-                            <a href="{{ route("admin.category-pondicheries.index") }}" class="c-sidebar-nav-link {{ request()->is('admin/category-pondicheries') || request()->is('admin/category-pondicheries/*') ? 'active' : '' }}">
+                            <a href="{{ route("admin.category-pondicheries.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/category-pondicheries") || request()->is("admin/category-pondicheries/*") ? "active" : "" }}">
                                 <i class="fa-fw fas fa-book-open c-sidebar-nav-icon">
 
                                 </i>
@@ -266,7 +250,7 @@
                     @endcan
                     @can('subcategory_pondichery_access')
                         <li class="c-sidebar-nav-item">
-                            <a href="{{ route("admin.subcategory-pondicheries.index") }}" class="c-sidebar-nav-link {{ request()->is('admin/subcategory-pondicheries') || request()->is('admin/subcategory-pondicheries/*') ? 'active' : '' }}">
+                            <a href="{{ route("admin.subcategory-pondicheries.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/subcategory-pondicheries") || request()->is("admin/subcategory-pondicheries/*") ? "active" : "" }}">
                                 <i class="fa-fw fab fa-microsoft c-sidebar-nav-icon">
 
                                 </i>
@@ -276,7 +260,7 @@
                     @endcan
                     @can('subsubcategory_access')
                         <li class="c-sidebar-nav-item">
-                            <a href="{{ route("admin.subsubcategories.index") }}" class="c-sidebar-nav-link {{ request()->is('admin/subsubcategories') || request()->is('admin/subsubcategories/*') ? 'active' : '' }}">
+                            <a href="{{ route("admin.subsubcategories.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/subsubcategories") || request()->is("admin/subsubcategories/*") ? "active" : "" }}">
                                 <i class="fa-fw fas fa-atlas c-sidebar-nav-icon">
 
                                 </i>
@@ -286,7 +270,7 @@
                     @endcan
                     @can('districtspondichery_access')
                         <li class="c-sidebar-nav-item">
-                            <a href="{{ route("admin.districtspondicheries.index") }}" class="c-sidebar-nav-link {{ request()->is('admin/districtspondicheries') || request()->is('admin/districtspondicheries/*') ? 'active' : '' }}">
+                            <a href="{{ route("admin.districtspondicheries.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/districtspondicheries") || request()->is("admin/districtspondicheries/*") ? "active" : "" }}">
                                 <i class="fa-fw fas fa-globe-americas c-sidebar-nav-icon">
 
                                 </i>
@@ -296,7 +280,7 @@
                     @endcan
                     @can('pondicheryassembly_access')
                         <li class="c-sidebar-nav-item">
-                            <a href="{{ route("admin.pondicheryassemblies.index") }}" class="c-sidebar-nav-link {{ request()->is('admin/pondicheryassemblies') || request()->is('admin/pondicheryassemblies/*') ? 'active' : '' }}">
+                            <a href="{{ route("admin.pondicheryassemblies.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/pondicheryassemblies") || request()->is("admin/pondicheryassemblies/*") ? "active" : "" }}">
                                 <i class="fa-fw fas fa-user-graduate c-sidebar-nav-icon">
 
                                 </i>
@@ -305,6 +289,16 @@
                         </li>
                     @endcan
                 </ul>
+            </li>
+        @endcan
+        @can('meeting_access')
+            <li class="c-sidebar-nav-item">
+                <a href="{{ route("admin.meetings.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/meetings") || request()->is("admin/meetings/*") ? "active" : "" }}">
+                    <i class="fa-fw fas fa-cogs c-sidebar-nav-icon">
+
+                    </i>
+                    {{ trans('cruds.meeting.title') }}
+                </a>
             </li>
         @endcan
         @can('user_management_access')
@@ -318,7 +312,7 @@
                 <ul class="c-sidebar-nav-dropdown-items">
                     @can('user_access')
                         <li class="c-sidebar-nav-item">
-                            <a href="{{ route("admin.users.index") }}" class="c-sidebar-nav-link {{ request()->is('admin/users') || request()->is('admin/users/*') ? 'active' : '' }}">
+                            <a href="{{ route("admin.users.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/users") || request()->is("admin/users/*") ? "active" : "" }}">
                                 <i class="fa-fw fas fa-user c-sidebar-nav-icon">
 
                                 </i>
@@ -328,7 +322,7 @@
                     @endcan
                     @can('role_access')
                         <li class="c-sidebar-nav-item">
-                            <a href="{{ route("admin.roles.index") }}" class="c-sidebar-nav-link {{ request()->is('admin/roles') || request()->is('admin/roles/*') ? 'active' : '' }}">
+                            <a href="{{ route("admin.roles.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/roles") || request()->is("admin/roles/*") ? "active" : "" }}">
                                 <i class="fa-fw fas fa-briefcase c-sidebar-nav-icon">
 
                                 </i>
@@ -338,7 +332,7 @@
                     @endcan
                     @can('permission_access')
                         <li class="c-sidebar-nav-item">
-                            <a href="{{ route("admin.permissions.index") }}" class="c-sidebar-nav-link {{ request()->is('admin/permissions') || request()->is('admin/permissions/*') ? 'active' : '' }}">
+                            <a href="{{ route("admin.permissions.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/permissions") || request()->is("admin/permissions/*") ? "active" : "" }}">
                                 <i class="fa-fw fas fa-unlock-alt c-sidebar-nav-icon">
 
                                 </i>
@@ -347,6 +341,16 @@
                         </li>
                     @endcan
                 </ul>
+            </li>
+        @endcan
+        @can('meeting_access')
+            <li class="c-sidebar-nav-item">
+                <a href="{{ route("admin.meetings.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/meetings") || request()->is("admin/meetings/*") ? "active" : "" }}">
+                    <i class="fa-fw fas fa-cogs c-sidebar-nav-icon">
+
+                    </i>
+                    {{ trans('cruds.meeting.title') }}
+                </a>
             </li>
         @endcan
         @if(file_exists(app_path('Http/Controllers/Auth/ChangePasswordController.php')))

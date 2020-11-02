@@ -18,12 +18,14 @@ use App\Models\Municipality;
 use App\Models\Municipalityvattam;
 use App\Models\Panchayat;
 use App\Models\Post;
+use App\Models\Meeting;
 use App\Models\Subcategory;
 use App\Models\Townpanchayat;
 use App\Models\Townvattam;
 use App\Http\Requests\StorePondicheryapplicationRequest;
 use App\Http\Requests\UpdatePondicheryapplicationRequest;
 use App\Http\Requests\MassDestroyPondicheryapplicationRequest;
+use App\Http\Requests\StoreMeetingRequest;
 use App\Models\CategoryPondichery;
 use App\Models\Districtspondichery;
 use App\Models\Pondicheryapplication;
@@ -364,5 +366,25 @@ class CustomController extends Controller
 
         return redirect()->back()->with('message', 'உங்களது விண்ணப்பம் கிடைத்தது. நன்றி - தலைமையகம், விசிக.');
 
+    }
+
+    public function meetingApplicationForm()
+    {
+        return view('meeting-application');
+    }
+
+    public function postMeetingApplicationForm(StoreMeetingRequest $request)
+    {
+        $meeting = Meeting::create($request->all());
+
+        if ($request->input('photo', false)) {
+            $meeting->addMedia(storage_path('tmp/uploads/' . $request->input('photo')))->toMediaCollection('photo');
+        }
+
+        if ($media = $request->input('ck-media', false)) {
+            Media::whereIn('id', $media)->update(['model_id' => $meeting->id]);
+        }
+
+        return redirect()->back()->with('message', 'உங்களது விண்ணப்பம் கிடைத்தது. நன்றி - தலைமையகம், விசிக.');
     }
 }

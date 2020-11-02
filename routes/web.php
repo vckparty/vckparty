@@ -10,6 +10,10 @@ Route::get('/application-pondichery', 'CustomController@pondicheryApplicationFor
 
 Route::post('postPondicheryApplication', 'CustomController@postPondicheryApplicationForm')->name('postPondicheryApplication');
 
+Route::get('/meeting-application', 'CustomController@meetingApplicationForm');
+
+Route::post('postMeetingApplication', 'CustomController@postMeetingApplicationForm')->name('postMeetingApplication');
+
 Route::get('get-subcategory-list','CustomController@getSubcategoryList');
 
 Route::get('get-post-list','CustomController@getPostList');
@@ -178,6 +182,12 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     // Pondicheryassemblies
     Route::delete('pondicheryassemblies/destroy', 'PondicheryassemblysController@massDestroy')->name('pondicheryassemblies.massDestroy');
     Route::resource('pondicheryassemblies', 'PondicheryassemblysController');
+
+        // Meetings
+    Route::delete('meetings/destroy', 'MeetingsController@massDestroy')->name('meetings.massDestroy');
+    Route::post('meetings/media', 'MeetingsController@storeMedia')->name('meetings.storeMedia');
+    Route::post('meetings/ckmedia', 'MeetingsController@storeCKEditorImages')->name('meetings.storeCKEditorImages');
+    Route::resource('meetings', 'MeetingsController');
 });
 Route::group(['prefix' => 'profile', 'as' => 'profile.', 'namespace' => 'Auth', 'middleware' => ['auth']], function () {
 // Change password
