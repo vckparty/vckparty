@@ -51,7 +51,7 @@
 <div class="container">
         <header class="c-header d-flex justify-content-center">
       <!-- Header content here -->
-      <img class="img-fluid" src="{{ asset('images/pondycherry.png') }}">
+      <img class="img-fluid" src="{{ asset('images/header.png') }}">
     </header>
     
 <div class="card">
