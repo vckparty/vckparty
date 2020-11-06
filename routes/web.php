@@ -40,7 +40,7 @@ Route::get('get-pandisubcategory-list','CustomController@getPandiSubcategoryList
 
 Route::get('get-pandisubsubcategory-list','CustomController@getPandiSubsubcategoryList');
 
-Route::get('advance-search', 'SearchController@search');
+Route::get('advance-search', 'SearchController@search')->name('advance-search');
 
 Route::post('search-results', 'SearchController@search_results')->name('searchresults');
 

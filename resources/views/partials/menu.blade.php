@@ -57,6 +57,16 @@
                 </ul>
             </li>
         @endcan
+        @can('advance_search_access')
+            <li class="c-sidebar-nav-item">
+                <a href="{{ route("advance-search") }}" class="c-sidebar-nav-link {{ request()->is("admin/advance-search") || request()->is("admin/advance-search") ? "active" : "" }}">
+                    <i class="fa-fw fas fa-file-alt c-sidebar-nav-icon">
+
+                    </i>
+                    Advance Search
+                </a>
+            </li>
+        @endcan
         @can('posting_access')
             <li class="c-sidebar-nav-item">
                 <a href="{{ route("admin.postings.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/postings") || request()->is("admin/postings/*") ? "active" : "" }}">
