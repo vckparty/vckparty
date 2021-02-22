@@ -311,6 +311,16 @@
                 </a>
             </li>
         @endcan
+        @can('training_access')
+            <li class="c-sidebar-nav-item">
+                <a href="{{ route("admin.trainings.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/trainings") || request()->is("admin/trainings/*") ? "c-active" : "" }}">
+                    <i class="fa-fw fas fa-cogs c-sidebar-nav-icon">
+
+                    </i>
+                    {{ trans('cruds.training.title') }}
+                </a>
+            </li>
+        @endcan
         @can('user_management_access')
             <li class="c-sidebar-nav-dropdown">
                 <a class="c-sidebar-nav-dropdown-toggle" href="#">
@@ -351,16 +361,6 @@
                         </li>
                     @endcan
                 </ul>
-            </li>
-        @endcan
-        @can('meeting_access')
-            <li class="c-sidebar-nav-item">
-                <a href="{{ route("admin.meetings.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/meetings") || request()->is("admin/meetings/*") ? "active" : "" }}">
-                    <i class="fa-fw fas fa-cogs c-sidebar-nav-icon">
-
-                    </i>
-                    {{ trans('cruds.meeting.title') }}
-                </a>
             </li>
         @endcan
         @if(file_exists(app_path('Http/Controllers/Auth/ChangePasswordController.php')))

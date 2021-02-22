@@ -86,4 +86,7 @@ Route::group(['prefix' => 'v1', 'as' => 'api.', 'namespace' => 'Api\V1\Admin', '
 
     // Pondicheryassemblies
     Route::apiResource('pondicheryassemblies', 'PondicheryassemblysApiController');
+        // Trainings
+    Route::post('trainings/media', 'TrainingApiController@storeMedia')->name('trainings.storeMedia');
+    Route::apiResource('trainings', 'TrainingApiController');
 });

@@ -4,6 +4,10 @@ Route::get('/', 'CustomController@welcomePage');
 
 Route::get('/socialmedia-application-form', 'CustomController@socialmedia');
 
+Route::get('/training-application', 'CustomController@training');
+
+Route::post('postTrainingApplication', 'CustomController@postTrainingApplicationForm')->name('postTrainingApplication');
+
 Route::post('postApplication', 'CustomController@postApp')->name('postApplication');
 
 Route::get('/application-pondichery', 'CustomController@pondicheryApplicationForm');
@@ -188,6 +192,12 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     Route::post('meetings/media', 'MeetingsController@storeMedia')->name('meetings.storeMedia');
     Route::post('meetings/ckmedia', 'MeetingsController@storeCKEditorImages')->name('meetings.storeCKEditorImages');
     Route::resource('meetings', 'MeetingsController');
+
+        // Trainings
+    Route::delete('trainings/destroy', 'TrainingController@massDestroy')->name('trainings.massDestroy');
+    Route::post('trainings/media', 'TrainingController@storeMedia')->name('trainings.storeMedia');
+    Route::post('trainings/ckmedia', 'TrainingController@storeCKEditorImages')->name('trainings.storeCKEditorImages');
+    Route::resource('trainings', 'TrainingController');
 });
 Route::group(['prefix' => 'profile', 'as' => 'profile.', 'namespace' => 'Auth', 'middleware' => ['auth']], function () {
 // Change password
