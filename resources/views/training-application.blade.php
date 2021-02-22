@@ -56,7 +56,7 @@
     
 <div class="card">
     <div class="card-header">
-        விண்ணப்பம்
+        சமூக ஊடகப் பயிற்சி முகாம்
     </div>
     <div class="container-fluid">
         @if($errors->count() > 0)
