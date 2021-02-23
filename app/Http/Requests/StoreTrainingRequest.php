@@ -9,10 +9,10 @@ use Illuminate\Http\Response;
 
 class StoreTrainingRequest extends FormRequest
 {
-    public function authorize()
-    {
-        return Gate::allows('training_create');
-    }
+    // public function authorize()
+    // {
+    //     return Gate::allows('training_create');
+    // }
 
     public function rules()
     {
