@@ -75,7 +75,7 @@ class StoreTrainingRequest extends FormRequest
             'address'         => [
                 'required',
             ],
-            'photo'           => [
+            'photo.*'           => [
                 'required',
             ],
         ];
